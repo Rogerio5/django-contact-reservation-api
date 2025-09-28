@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Reservas{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Agendar Banho</h2>
+
+<form method="post" class="row g-3">
+    {% csrf_token %}
+
+    <div class="col-md-6">
+        <label for="id_pet_nome" class="form-label">Nome do Pet:</label>
+        <input type="text" name="pet_nome" id="id_pet_nome" class="form-control" placeholder="Digite o nome do pet" required>
+    </div>
+
+    <div class="col-md-6">
+        <label for="id_telefone" class="form-label">Telefone:</label>
+        <input type="text" name="telefone" id="id_telefone" class="form-control" placeholder="(xx) xxxxx-xxxx" required>
+    </div>
+
+    <div class="col-md-6">
+        <label for="id_data" class="form-label">Data:</label>
+        <input type="date" name="data" id="id_data" class="form-control" required>
+    </div>
+
+    <div class="col-12">
+        <label for="id_observacoes" class="form-label">Observações:</label>
+        <textarea name="observacoes" id="id_observacoes" class="form-control" rows="3" placeholder="Alguma observação?"></textarea>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-success">Agendar</button>
+    </div>
+</form>
+
+{% for message in messages %}
+    <p class="text-success mt-3">{{ message }}</p>
+{% endfor %}
+
+{% if form.errors %}
+    <div class="alert alert-danger mt-3">
+        {{ form.errors }}
+    </div>
+{% endif %}
+{% endblock %}

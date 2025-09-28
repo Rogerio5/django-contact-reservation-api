@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Contato{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Entre em Contato</h2>
+
+<form method="post" class="row g-3">
+    {% csrf_token %}
+
+    <div class="col-md-6">
+        <label for="id_nome" class="form-label">Nome:</label>
+        <input type="text" name="nome" id="id_nome" class="form-control" placeholder="Digite seu nome" required>
+    </div>
+
+    <div class="col-md-6">
+        <label for="id_email" class="form-label">E-mail:</label>
+        <input type="email" name="email" id="id_email" class="form-control" placeholder="Digite seu e-mail" required>
+    </div>
+
+    <div class="col-12">
+        <label for="id_mensagem" class="form-label">Mensagem:</label>
+        <textarea name="mensagem" id="id_mensagem" class="form-control" rows="4" placeholder="Digite sua mensagem" required></textarea>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+</form>
+
+{% for message in messages %}
+    <p class="text-success mt-3">{{ message }}</p>
+{% endfor %}
+
+{% if form.errors %}
+    <div class="alert alert-danger mt-3">
+        {{ form.errors }}
+    </div>
+{% endif %}
+{% endblock %}

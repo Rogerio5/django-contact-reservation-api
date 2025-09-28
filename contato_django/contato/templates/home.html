@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 text-center">Bem-vindo ao Sistema PetCare 🐾</h2>
+
+<p class="lead text-center">
+    Nosso compromisso é cuidar do seu pet com carinho, dedicação e profissionalismo.  
+    Explore os recursos do sistema através do menu acima.
+</p>
+
+<div class="row text-center mt-5">
+    <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+            <h5>🐶 Banho & Tosa</h5>
+            <p>Agende um horário para deixar seu pet limpo e feliz.</p>
+            <a href="{% url 'reserva' %}" class="btn btn-success">Agendar</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+            <h5>📩 Contato</h5>
+            <p>Fale com nossa equipe para tirar dúvidas ou enviar sugestões.</p>
+            <a href="{% url 'contato' %}" class="btn btn-primary">Entrar em Contato</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+            <h5>❤️ Nossa Missão</h5>
+            <p>Cuidar do seu pet como se fosse parte da nossa família.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

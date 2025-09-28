@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Meu Sistema{% endblock %}</title>
+    {% load static %}
+
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">🐾 PetCare</a>
+    <div class="navbar-nav">
+      <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">🏠 Home</a>
+      <a class="nav-link {% if request.resolver_match.url_name == 'contato' %}active{% endif %}" href="{% url 'contato' %}">📩 Contato</a>
+      <a class="nav-link {% if request.resolver_match.url_name == 'reserva' %}active{% endif %}" href="{% url 'reserva' %}">🐶 Reservas</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<div class="container mb-4">
+  <div class="card shadow-sm banner-container">
+    <img src="{% static 'image/banner.jpg' %}" alt="Banner PetCare">
+    <div class="banner-text">
+      <h1 class="slogan">PETCARE IS OUR PASSION</h1>
+      <h2 class="bemvindo">🐾 Bem-vindo ao PetCare</h2>
+    </div>
+  </div>
+</div>
+
+<!-- Seção de informações rápidas -->
+<div class="container mb-4">
+  <div class="row text-center">
+    <div class="col-md-4">
+      <h5>📍 Endereço</h5>
+      <p><a href="https://goo.gl/maps/xxxx" target="_blank">Rua Exemplo, 123 - Bauru/SP</a></p>
+    </div>
+    <div class="col-md-4">
+      <h5>📞 Emergência</h5>
+      <p>(14) 98888-7777</p>
+    </div>
+    <div class="col-md-4">
+      <h5>⏰ Horário</h5>
+      <p>Seg-Sex: 8h às 18h<br>Sáb: 9h às 14h</p>
+    </div>
+  </div>
+</div>
+
+<!-- Conteúdo principal -->
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+<!-- Depoimentos -->
+<div class="container my-5">
+  <h3 class="text-center mb-4">⭐ O que nossos clientes dizem</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm">
+        <p>"Excelente atendimento, meu cachorro adorou!"</p>
+        <small>- Maria S.</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm">
+        <p>"Equipe muito atenciosa e profissional."</p>
+        <small>- João P.</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm">
+        <p>"Ambiente limpo e seguro, recomendo!"</p>
+        <small>- Ana L.</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mapa -->
+<div class="container mb-5">
+  <h3 class="text-center mb-3">📍 Onde estamos</h3>
+  <div class="card shadow-sm">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+<!-- Rodapé -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    <p class="mb-1">📍 Rua Exemplo, 123 - Bauru/SP</p>
+    <p class="mb-1">📞 (14) 99999-9999 | ✉️ contato@petcare.com</p>
+    <p class="mb-1">
+      🌐 Siga-nos:
+      <a href="https://instagram.com/seu_instagram" target="_blank" class="text-white mx-2">Instagram</a> |
+      <a href="https://facebook.com/seu_facebook" target="_blank" class="text-white mx-2">Facebook</a> |
+      <a href="https://wa.me/5514999999999" target="_blank" class="text-white mx-2">WhatsApp</a>
+    </p>
+    <small>© 2025 PetCare - Todos os direitos reservados</small>
+  </div>
+</footer>
+
+<!-- Botão WhatsApp flutuante -->
+<a href="https://wa.me/5514999999999" class="whatsapp-float" target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- JS customizado -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

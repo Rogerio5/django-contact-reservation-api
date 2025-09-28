@@ -1,0 +1,219 @@
+{
+  "info": {
+    "name": "Contato Django API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Coleção de testes para a API de Contatos, Reservas e Categorias (CRUD completo, com autenticação por Token e variável de URL)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Contatos",
+      "item": [
+        {
+          "name": "Listar Contatos",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "url": "{{url}}/contato/api/contatos/"
+          }
+        },
+        {
+          "name": "Criar Contato",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Rogerio\",\n  \"email\": \"rogerio@email.com\",\n  \"mensagem\": \"Gostaria de mais informações.\"\n}"
+            },
+            "url": "{{url}}/contato/api/contatos/"
+          }
+        },
+        {
+          "name": "Detalhar Contato",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "url": "{{url}}/contato/api/contatos/1/"
+          }
+        },
+        {
+          "name": "Atualizar Contato",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Rogerio Silva\",\n  \"email\": \"rogerio@email.com\",\n  \"mensagem\": \"Atualizando minha mensagem.\"\n}"
+            },
+            "url": "{{url}}/contato/api/contatos/1/"
+          }
+        },
+        {
+          "name": "Deletar Contato",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "url": "{{url}}/contato/api/contatos/1/"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reservas",
+      "item": [
+        {
+          "name": "Listar Reservas",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "url": "{{url}}/contato/api/reservas/"
+          }
+        },
+        {
+          "name": "Criar Reserva",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pet_nome\": \"Rex\",\n  \"telefone\": \"11999999999\",\n  \"data\": \"2025-09-30\",\n  \"observacoes\": \"Banho e tosa\",\n  \"categoria\": 1\n}"
+            },
+            "url": "{{url}}/contato/api/reservas/"
+          }
+        },
+        {
+          "name": "Detalhar Reserva",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "url": "{{url}}/contato/api/reservas/1/"
+          }
+        },
+        {
+          "name": "Atualizar Reserva",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pet_nome\": \"Thor\",\n  \"telefone\": \"11988887777\",\n  \"data\": \"2025-10-01\",\n  \"observacoes\": \"Consulta veterinária\",\n  \"categoria\": 1\n}"
+            },
+            "url": "{{url}}/contato/api/reservas/1/"
+          }
+        },
+        {
+          "name": "Deletar Reserva",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "url": "{{url}}/contato/api/reservas/1/"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categorias",
+      "item": [
+        {
+          "name": "Listar Categorias",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "url": "{{url}}/contato/api/categorias/"
+          }
+        },
+        {
+          "name": "Criar Categoria",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Cachorro\"\n}"
+            },
+            "url": "{{url}}/contato/api/categorias/"
+          }
+        },
+        {
+          "name": "Detalhar Categoria",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "url": "{{url}}/contato/api/categorias/1/"
+          }
+        },
+        {
+          "name": "Atualizar Categoria",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Gato\"\n}"
+            },
+            "url": "{{url}}/contato/api/categorias/1/"
+          }
+        },
+        {
+          "name": "Deletar Categoria",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "url": "{{url}}/contato/api/categorias/1/"
+          }
+        },
+        {
+          "name": "Listar Reservas de uma Categoria",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Token {{auth_token}}" }
+            ],
+            "url": "{{url}}/contato/api/categorias/1/reservas/"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "url", "value": "http://127.0.0.1:8000" },
+    { "key": "auth_token", "value": "" }
+  ]
+}
