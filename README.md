@@ -4,8 +4,7 @@
 ## 📬 Contact + 📅 Reservas + 🐾 Categorias + 🌐 API REST
 
  
-![Capa do Projeto - Contact](reserva.png)
-![Capa do Projeto - Contact](reserva1.png)
+![Capa do Projeto - Contact](reserva_contato.png)
 
 ---
 
