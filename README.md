@@ -65,13 +65,12 @@ The system allows:
 
 ## 📌 Status do Projeto / Project Status
 
-![Status](https://img.shields.io/badge/STATUS-Em%20Evolução-success?style=for-the-badge)
+## 📌 Status do Projeto / Project Status
+
+![Status](https://img.shields.io/badge/Status-Concluído%2FArchived-blueviolet?style=for-the-badge)
 
 **PT:**  
-Este projeto está **ativo e em evolução**. Novas funcionalidades podem ser adicionadas ao longo do tempo.  
-
-**EN:**  
-This project is **active and evolving**. New features may be added over time.  
+Este projeto foi **concluído** e está mantido aqui apenas como **referência histórica**.  
 
 ---
 
