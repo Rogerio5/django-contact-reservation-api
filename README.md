@@ -4,7 +4,9 @@
 ## 📬 Contact + 📅 Reservas + 🐾 Categorias + 🌐 API REST
 
  
-![Capa do Projeto - Contact](reserva_contato.png)
+![Capa do Projeto - Contact](reserva.png)
+![Capa do Projeto - Contact](reserva1.png)
+
 ---
 
 ## 🏅 Badges
@@ -62,8 +64,6 @@ The system allows:
 - Using **filters, search, and ordering** in API endpoints  
 
 ---
-
-## 📌 Status do Projeto / Project Status
 
 ## 📌 Status do Projeto / Project Status
 
